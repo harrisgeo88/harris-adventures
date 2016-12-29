@@ -1,22 +1,35 @@
 var React = require('react');
+var BS = require('react-bootstrap');
 
 var FormInput = React.createClass({
 
   getDefaultProps() {
     return {
       style: {display: 'box'},
-      text: '',
+      type: 'text',
       placeholder: '',
       label: '',
-      className: ''
+      className: '',
+      br: true
     }
   },
 
+  createElement(type = '', placeholder = '', style = [], className = '', value = '') {
+    if (type == 'textarea')
+      return <BS.FormControl componentClass="textarea" placeholder={placeholder} className={className} value={value}/>
+    else
+      return <BS.FormControl placeholder={placeholder} className={className} value={value}/>
+  },
+
   render() {
-    var {text, label, placeholder, style, className} = this.props
+    var {type, label, placeholder, style, className, br, value} = this.props
+    var element = type == 'textarea' ? 'ControlLabel' : 'FormControl'
+    var textarea = type == 'textarea' ? 'textarea' : ''
+
     return <div>
       <label>{label}</label>
-      <input type="text" className={className} style={{style}} placeholder={placeholder}/>
+      {this.createElement(type, placeholder, style, className, value)}
+      {br ? <br/> : ''}
     </div>
   }
 });
