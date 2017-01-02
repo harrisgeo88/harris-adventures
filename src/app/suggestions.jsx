@@ -3,7 +3,7 @@ var ReactDOM = require('react-dom');
 var FormInput = require('../components/form_input');
 var BS = require('react-bootstrap');
 
-var Test = React.createClass({
+var Suggestions = React.createClass({
   render() {
     // console.log(yo)
     return <form id="suggestions-form" style={{width:700, margin: 'auto'}}>
@@ -16,4 +16,4 @@ var Test = React.createClass({
   }
 });
 
-module.exports = Test;
+module.exports = Suggestions;
