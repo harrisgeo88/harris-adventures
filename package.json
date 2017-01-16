@@ -13,6 +13,7 @@
     "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
+    "datamaps": "^0.5.8",
     "less": "2.5.3",
     "less-loader": "^2.2.3",
     "react": "^15.4.1",

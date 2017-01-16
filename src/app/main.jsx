@@ -1,15 +1,15 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var SubLabel = require('./sub_label');
+import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
 
-var Test = React.createClass({
+class Main extends Component {
   render() {
-    // console.log(yo)
     return <div>
       <h1>Hey Harris</h1>
-      <SubLabel text="sup"/>
+      <a href="/maps">Maps</a>
+      <br/>
+      <a href="/experiments">Experiments</a>
     </div>
   }
-});
+}
 
-module.exports = Test;
+module.exports = Main

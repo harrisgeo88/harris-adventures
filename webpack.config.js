@@ -11,21 +11,14 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: /\.js$/,
+                test: /\.jsx$/,
                 include: path.resolve(__dirname, 'src'),
                 loader: 'babel-loader',
                 query: {
                     presets: ['react', 'es2015']
                 }
             },
-            {
-                test: /\.jsx$/,
-                loader: 'jsx-loader?insertPragma=React.DOM&harmony'
-            },
-            {
-                test: /\.css$/,
-                loader: 'style-loader!css-loader'
-            }
+            { test: /\.less$/, loader: "style!css!less" }
         ]
     },
     resolve: {
