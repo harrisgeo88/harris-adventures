@@ -44,6 +44,7 @@ export default {
       NOR: { fillKey: "loved" }, // Norway
       TUR: { fillKey: "liked" }, // Turkey
       MLT: { fillKey: "liked" }, // Malta
+      FIN: { fillKey: "loved" }, // Finland
     }
   },
 

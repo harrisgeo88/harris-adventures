@@ -1,7 +1,9 @@
 import Datamap from 'datamaps/dist/datamaps.world.min'
 import React from 'react';
 import ReactDOM from 'react-dom';
-import mapData from './map-data';
+import CountryCounter from './country_counter';
+import CountryInfo from './country_info';
+import mapData from './map_data';
 
 export default class DataMap extends React.Component {
   constructor(props){
@@ -16,6 +18,14 @@ export default class DataMap extends React.Component {
       fills: mapData.fills(), // data categories
       data: mapData.data(), // countries
       geographyConfig: mapData.geographyConfig(), // hover colour
+      done: function(datamap) {
+        console.log(datamap)
+        datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
+            console.log(geography)
+            // alert(geography.properties.name);
+            // <CountryInfo />
+        });
+      }
     });
   }
   componentDidMount(){
@@ -27,7 +37,7 @@ export default class DataMap extends React.Component {
   render() {
     return (
       <div id="datamap-container">
-        <div id="been">Been to <strong>{mapData.totalCountries()}</strong> countries</div>
+        <CountryCounter counter={mapData.totalCountries()} />
       </div>
     );
   }
