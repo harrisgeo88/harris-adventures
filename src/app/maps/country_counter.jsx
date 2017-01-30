@@ -9,7 +9,7 @@ export default class CountryCounter extends React.Component {
   render() {
     return <div id="been">
       <img id="compass" src="http://www.newdesignfile.com/postpic/2010/02/compass-outline_229542.png" />
-      <p id="country-counter">Been to <strong>{this.props.counter}</strong></p>
+      <p id="country-counter">Total <strong>{this.props.counter}</strong></p>
     </div>
   }
 }

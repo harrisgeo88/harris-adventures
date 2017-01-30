@@ -7,7 +7,7 @@ export default class CountryInfo extends React.Component {
   }
 
   render() {
-    console.log('yo')
+    console.log('i still need to be developed')
     return <div></div>
   }
 }

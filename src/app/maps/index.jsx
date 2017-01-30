@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import CountryCounter from './country_counter';
 import CountryInfo from './country_info';
 import mapData from './map_data';
+import NavBar from './nav_bar';
 
 export default class DataMap extends React.Component {
   constructor(props){
@@ -37,6 +38,9 @@ export default class DataMap extends React.Component {
   render() {
     return (
       <div id="datamap-container">
+        <NavBar />
+        <br/>
+        <br/>
         <CountryCounter counter={mapData.totalCountries()} />
       </div>
     );
